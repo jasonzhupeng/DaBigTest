@@ -10,6 +10,7 @@
     </Row>
     <br />
     <Table :columns="columns1" :data="list" :loading="showLoad">
+      <template slot-scope="{ row }" slot="createTime">{{row.createTime|datetimeFormatter("yyyy-MM-dd hh:mm")}}</template>
       <template slot-scope="{ row }" slot="action">
         <Button type="primary" size="small" @click="seeView(row)">View</Button>
       </template>
@@ -92,6 +93,11 @@ export default class Detail extends Vue {
   {
     title: '测试结果',
     key: 'passFlag'
+  },
+  {
+    title: '运行时间',
+    slot: 'createTime',
+    width: 150
   },
   {
     title: '操作',
