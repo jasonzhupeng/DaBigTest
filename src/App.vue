@@ -37,9 +37,11 @@
   background: #2d8cf0;
   z-index: 9;
 }
-
 .layout-footer-center {
   text-align: center;
+}
+a:hover {
+  text-decoration: underline;
 }
 /* .layout {
   border: 1px solid #d7dde4;
