@@ -93,6 +93,12 @@ export default class Home extends Vue {
     });
   }
 
+  async mounted() {
+    if (this.$route.query.key) {
+      this.searckKey = this.$route.query.key.toString();
+    }
+  }
+
   async queryData() {
     this.showLoad = true;
 
